@@ -68,7 +68,7 @@ def detect_apple(frame, conf_threshold=0.5):
             cls_id = int(box.cls[0])
             
             #计算成熟度
-            ripeness, ripelevel = calculate_ripeness(frame, (x1, y1, x2, y2),False)
+            ripeness, ripelevel = calculate_ripeness(frame, (x1, y1, x2, y2),True)
             #保存到列表内部
             #返回坐标位置 置信度 类别
             detections.append([x1, y1, x2, y2, conf, ripelevel, cls_id])
